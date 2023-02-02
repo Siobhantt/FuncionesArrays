@@ -13,9 +13,9 @@ public class Ej3 {
 		
 		Scanner lee = new Scanner(System.in);
 		
-		System.out.println("Introduzca la longitud y el fin respectivamente:");
-		
+		System.out.println("Introduzca la longitud de la tabla: ");
 		longitud=lee.nextInt();
+		System.out.println("Introduzca el fin de la tabla: :");
 		fin = lee.nextInt();
 		System.out.println(Arrays.toString(rellenaPares(longitud,fin)));
 
@@ -27,6 +27,9 @@ public class Ej3 {
 		for(int i=0;i<tabla.length;i++) {
 			par =(int)((Math.random()*(fin-2+1))+2);
 			
+			while (par%2!=0) {
+				par =(int)((Math.random()*(fin-2+1))+2);
+			}
 			if(par%2==0) {
 				tabla[i]= par;
 			}
