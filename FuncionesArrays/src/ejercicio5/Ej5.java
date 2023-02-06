@@ -9,18 +9,7 @@ public class Ej5 {
 	 * una tabla de la longitud apropiada, con los elementos de t, donde se han
 	 * eliminado los datos repetidos.
 	 */
-	public static void main(String[] args) {
-
-		int tablota[] = new int[9];
-		Scanner lee = new Scanner (System.in);
-		
-		System.out.println("Por favor introduzca numeros separados por enter: ");
-		for(int i=0; i<tablota.length;i++) {
-			tablota[i]= lee.nextInt();
-		}
-		System.out.println("Tabla original: "+Arrays.toString(tablota));
-		System.out.println("Tabla con elementos sin repetir: "+Arrays.toString(sinRepetidos(tablota)));
-	}
+	
 
 	public static int[] sinRepetidos(int t[]) {
 	int tablaCopy[] = new int[0];
