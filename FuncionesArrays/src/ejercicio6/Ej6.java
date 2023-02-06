@@ -10,6 +10,9 @@ public class Ej6 {
 		int tabla[] = new int [0];
 		int indice;
 		
+		for (element : tabla) {
+			
+		}
 		
 		
 	}//fin del metodo
