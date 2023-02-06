@@ -9,10 +9,6 @@ public class Ej4 {
 	 * secuencial en la tabla t el valor clave. En caso de encontrarlo, devuelve en
 	 * qué posición lo encuentra; y en caso contrario, devolverá -1.
 	 */
-	public static void main(String[] args) {
-
-	}// fin del main
-
 	public static int buscar(int t[], int clave) {
 		int indiceB = 0;
 		while (indiceB < t.length && clave != t[indiceB]) {
