@@ -1,4 +1,4 @@
-package ejercicios;
+package ejercicio3;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,19 +7,6 @@ public class Ej3 {
 /*Escribir la función int[] rellenaPares(int longitud, int fin),
  *  que crea y devuelve una tabla ordenada de la longitud especificada,
  *   que se encuentra rellena con números pares aleatorios comprendidos entre 2 hasta fin inclusive*/
-	public static void main(String[] args) {
-		int longitud;
-		int fin;
-		
-		Scanner lee = new Scanner(System.in);
-		
-		System.out.println("Introduzca la longitud de la tabla: ");
-		longitud=lee.nextInt();
-		System.out.println("Introduzca el fin de la tabla: :");
-		fin = lee.nextInt();
-		System.out.println(Arrays.toString(rellenaPares(longitud,fin)));
-
-	}//fin del main
 	public static int[] rellenaPares(int longitud, int fin) {
 		
 		int tabla[]=new int[longitud];
