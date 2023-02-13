@@ -3,28 +3,28 @@ package ejercicio6;
 import java.util.Arrays;
 
 public class Ej6 {
-/*Escribir la función: int[] eliminarMayores(int t[], int valor), 
- * que crea y devuelve una copia de la tabla t donde se han eliminado todos los elementos que son mayores que valor.*/
-	
-	public static int [] eliminarMayores(int t[], int valor) {
-		int indice = 0;
-		while(indice<t.length) {
-			
-			if (t[indice]>valor) {
-				
-				t = borrar(t, indice);
-				} else {// sin esto NO FUNCIONA
-					indice++;
-				}//fin del if
-		}//fin del while
-		return t;
-	}//fin del metodo	
-	public static int[] borrar(int[] tabla, int indice) {
-		if (indice >= 0) {
-			System.arraycopy(tabla, indice + 1, tabla, indice, tabla.length - indice - 1);
-		}
+	/*
+	 * Escribir la función: int[] eliminarMayores(int t[], int valor), que crea y
+	 * devuelve una copia de la tabla t donde se han eliminado todos los elementos
+	 * que son mayores que valor.
+	 */
 
-		tabla = Arrays.copyOf(tabla, tabla.length - 1);
-		return tabla;
-	}//fin del metodo
-}
+	public static int[] eliminarMayores(int t[], int valor) {
+		//codigo de yeray
+		//creo una tabla auxiliar
+		int aux[] = new int [0];
+		//recorro la tabla principal
+		for (int i = 0; i < t.length; i++) {
+			//compruebo si lo que esta guardado en ese indice es menor que el valor
+			if (t[i]<=valor){
+				//en caso de que si sea menor hago la tabla mas grande en 1
+				aux = Arrays.copyOf(aux, aux.length+1);
+			//y guardo ese valor (que es mas pequeño en la tabla)
+			
+				aux[aux.length-1] = t[i]; 
+			//No estoy eliminando, estoy haciendo una tabla nueva  con los valores mas pequeños 
+			}
+			}//fin del for
+		return aux;
+		}
+	}// fin del metodo
